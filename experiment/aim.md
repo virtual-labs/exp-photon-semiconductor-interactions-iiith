@@ -1,1 +1,1 @@
-### Aim of the experiment
+To study the interactions between photons and semiconductors, including absorption, emission, and recombination processes, and to understand how direct and indirect bandgap materials influence optoelectronic device behavior such as LEDs, lasers, and solar cells.
