@@ -4,100 +4,100 @@
     {
       "question": "1. In a direct bandgap semiconductor, photon emission is more efficient because:",
       "options": {
-        "A": "Electron momentum changes significantly",
-        "B": "No phonon assistance is needed for recombination",
-        "C": "Absorption coefficient is independent of energy",
-        "D": "Bandgap energy is zero"
+        "a": "Electron momentum changes significantly",
+        "b": "No phonon assistance is needed for recombination",
+        "c": "Absorption coefficient is independent of energy",
+        "d": "Bandgap energy is zero"
       },
-      "answer": "B",
+      "answer": "b",
       "explanation": "In direct bandgap materials, electrons directly recombine with holes without requiring phonon assistance, making photon emission more efficient."
     },
     {
       "question": "2. Which phenomenon is responsible for the delayed light emission in phosphorescence?",
       "options": {
-        "A": "Fast radiative recombination",
-        "B": "Trapping of carriers in metastable states",
-        "C": "Direct transition across the bandgap",
-        "D": "Spontaneous stimulated emission"
+        "a": "Fast radiative recombination",
+        "b": "Trapping of carriers in metastable states",
+        "c": "Direct transition across the bandgap",
+        "d": "Spontaneous stimulated emission"
       },
-      "answer": "B",
+      "answer": "b",
       "explanation": "Phosphorescence occurs when carriers get trapped in metastable states, causing delayed photon emission compared to fluorescence."
     },
     {
       "question": "3. Which property determines whether a semiconductor is suitable for LED applications?",
       "options": {
-        "A": "Indirect bandgap and high resistivity",
-        "B": "Direct bandgap and high radiative efficiency",
-        "C": "Low mobility of charge carriers",
-        "D": "Very wide bandgap"
+        "a": "Indirect bandgap and high resistivity",
+        "b": "Direct bandgap and high radiative efficiency",
+        "c": "Low mobility of charge carriers",
+        "d": "Very wide bandgap"
       },
-      "answer": "B",
+      "answer": "b",
       "explanation": "LEDs require direct bandgap materials because they exhibit efficient radiative recombination, resulting in bright light emission."
     },
     {
       "question": "4. If the absorption coefficient α of a material sharply increases when the incident photon energy exceeds Eg, this indicates:",
       "options": {
-        "A": "The material has a direct bandgap",
-        "B": "The material has an indirect bandgap",
-        "C": "Photon energy is less than the Fermi energy",
-        "D": "Carrier mobility is constant"
+        "a": "The material has a direct bandgap",
+        "b": "The material has an indirect bandgap",
+        "c": "Photon energy is less than the Fermi energy",
+        "d": "Carrier mobility is constant"
       },
-      "answer": "A",
+      "answer": "a",
       "explanation": "For direct bandgap semiconductors, the absorption coefficient rises quickly when photon energy surpasses Eg, as transitions require no phonon assistance."
     },
     {
       "question": "5. Fluorescence differs from stimulated emission because:",
       "options": {
-        "A": "Fluorescence is instantaneous and incoherent",
-        "B": "Fluorescence requires population inversion",
-        "C": "Stimulated emission emits random photons",
-        "D": "Stimulated emission occurs without energy input"
+        "a": "Fluorescence is instantaneous and incoherent",
+        "b": "Fluorescence requires population inversion",
+        "c": "Stimulated emission emits random photons",
+        "d": "Stimulated emission occurs without energy input"
       },
-      "answer": "A",
+      "answer": "a",
       "explanation": "Fluorescence occurs spontaneously and produces incoherent light, whereas stimulated emission is triggered and produces coherent photons."
     },
     {
       "question": "6. The peak wavelength (λ) emitted by a semiconductor LED is primarily determined by:",
       "options": {
-        "A": "Carrier mobility",
-        "B": "Doping concentration",
-        "C": "Bandgap energy Eg",
-        "D": "Lattice constant"
+        "a": "Carrier mobility",
+        "b": "Doping concentration",
+        "c": "Bandgap energy Eg",
+        "d": "Lattice constant"
       },
-      "answer": "C",
+      "answer": "c",
       "explanation": "The emitted photon energy depends on the bandgap: λ ≈ hc/Eg. A larger Eg gives a shorter emission wavelength."
     },
     {
       "question": "7. A semiconductor has Eg = 1.8 eV. Calculate the wavelength of the emitted photons during spontaneous emission.",
       "options": {
-        "A": "689 nm",
-        "B": "550 nm",
-        "C": "1032 nm",
-        "D": "450 nm"
+        "a": "689 nm",
+        "b": "550 nm",
+        "c": "1032 nm",
+        "d": "450 nm"
       },
-      "answer": "A",
+      "answer": "a",
       "explanation": "Using E = hc/λ → λ = 1240/E. For Eg = 1.8 eV, λ = 1240/1.8 ≈ 689 nm, which lies in the red region."
     },
     {
       "question": "8. In a laser diode, population inversion is necessary because:",
       "options": {
-        "A": "It minimizes non-radiative recombination",
-        "B": "It ensures stimulated emission dominates over absorption",
-        "C": "It lowers the threshold current for LEDs",
-        "D": "It increases phonon scattering"
+        "a": "It minimizes non-radiative recombination",
+        "b": "It ensures stimulated emission dominates over absorption",
+        "c": "It lowers the threshold current for LEDs",
+        "d": "It increases phonon scattering"
       },
-      "answer": "B",
+      "answer": "b",
       "explanation": "Population inversion means more carriers are in excited states than in ground states, allowing stimulated emission to dominate and enabling lasing."
     },
     {
       "question": "9. For a semiconductor with an indirect bandgap, efficient photon emission requires:",
       "options": {
-        "A": "Only electron-hole recombination",
-        "B": "Phonon participation to conserve momentum",
-        "C": "High doping concentration",
-        "D": "Complete absence of defects"
+        "a": "Only electron-hole recombination",
+        "b": "Phonon participation to conserve momentum",
+        "c": "High doping concentration",
+        "d": "Complete absence of defects"
       },
-      "answer": "B",
+      "answer": "b",
       "explanation": "In indirect bandgap semiconductors, phonon participation is required to conserve momentum during radiative recombination."
     }
   ]
