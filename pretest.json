@@ -1,0 +1,155 @@
+{"version": 2.0, "questions": [
+{
+"question": "1. In semiconductors, what condition must a photon satisfy to generate an electron-hole pair?",
+"answers": {
+"a": "hν < Eg",
+"b": "hν = Eg",
+"c": "hν ≥ Eg",
+"d": "hν << Eg"
+},
+"explanations": {
+"a": "Incorrect. Photons with less energy than Eg cannot excite electrons.",
+"b": "Incorrect. Exactly Eg works but not always sufficient; we require hν ≥ Eg.",
+"c": "Correct. Photon energy must be greater than or equal to the bandgap energy.",
+"d": "Incorrect. Too little energy results in no carrier excitation."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+},
+{
+"question": "2. Which type of material is more efficient for light emission in LEDs?",
+"answers": {
+"a": "Indirect bandgap materials like Si",
+"b": "Direct bandgap materials like GaAs",
+"c": "Wide-bandgap insulators",
+"d": "Any material, bandgap does not matter"
+},
+"explanations": {
+"a": "Incorrect. Indirect materials lose energy to phonons.",
+"b": "Correct. Direct bandgap materials allow efficient radiative recombination.",
+"c": "Incorrect. Insulators are not suitable for carrier injection.",
+"d": "Incorrect. Bandgap type critically affects light emission."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "3. Fluorescence differs from phosphorescence mainly in:",
+"answers": {
+"a": "Photon wavelength",
+"b": "Carrier lifetime after excitation",
+"c": "Photon energy source",
+"d": "Bandgap size"
+},
+"explanations": {
+"a": "Incorrect. Both can emit similar wavelengths.",
+"b": "Correct. Fluorescence has short lifetimes (~ns), phosphorescence has longer lifetimes (~ms to s).",
+"c": "Incorrect. Both depend on absorbed photons.",
+"d": "Incorrect. Bandgap size doesn't distinguish them."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "4. For a semiconductor with Eg = 1.9 eV, find the maximum wavelength λmax of photons that can generate e-h pairs. Use h = 6.626×10⁻³⁴ J·s, c = 3×10⁸ m/s, q = 1.6×10⁻¹⁹ C.",
+"answers": {
+"a": "520 nm",
+"b": "653 nm",
+"c": "730 nm",
+"d": "820 nm"
+},
+"explanations": {
+"a": "Incorrect. Miscalculated using Eg incorrectly.",
+"b": "Correct. λmax = hc/(Eg·q) ≈ (6.626e-34×3e8)/(1.9×1.6e-19) ≈ 653 nm.",
+"c": "Incorrect. Too large for given Eg.",
+"d": "Incorrect. Far too large; violates energy relation."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+},
+{
+"question": "5. The absorption coefficient α of a direct bandgap semiconductor near the band edge follows which relation?",
+"answers": {
+"a": "α ∝ (hν - Eg)²",
+"b": "α ∝ √(hν - Eg)",
+"c": "α ∝ (hν)²",
+"d": "α ∝ exp(hν)"
+},
+"explanations": {
+"a": "Incorrect. That is the behavior for indirect bandgap materials.",
+"b": "Correct. For direct bandgap semiconductors, α ∝ √(hν - Eg).",
+"c": "Incorrect. Square dependence is not observed.",
+"d": "Incorrect. Exponential relation is unrelated here."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+},
+{
+"question": "6. In a semiconductor laser, population inversion is achieved when:",
+"answers": {
+"a": "N2 < N1",
+"b": "N2 = N1",
+"c": "N2 > N1",
+"d": "Carrier lifetime = 0"
+},
+"explanations": {
+"a": "Incorrect. N2 < N1 implies no lasing occurs.",
+"b": "Incorrect. Equal populations do not generate gain.",
+"c": "Correct. Stimulated emission dominates only when the upper level population exceeds the lower level.",
+"d": "Incorrect. Zero lifetime prevents emission entirely."
+},
+"correctAnswer": "c",
+"difficulty": "intermediate"
+},
+{
+"question": "7. A semiconductor has Eg = 2.0 eV. If a photon of λ = 700 nm strikes it, will it create an e-h pair? Use hc = 1240 eV·nm.",
+"answers": {
+"a": "Yes, because photon energy = 2.5 eV",
+"b": "No, because photon energy = 1.77 eV",
+"c": "Yes, because photon energy = 1.5 eV",
+"d": "Cannot determine without material type"
+},
+"explanations": {
+"a": "Incorrect. Energy calculation mismatch.",
+"b": "Correct. E = hc/λ ≈ 1240/700 ≈ 1.77 eV, which is < Eg, so no absorption occurs.",
+"c": "Incorrect. Wrong energy computation.",
+"d": "Incorrect. Material type irrelevant; only Eg vs. E matters."
+},
+"correctAnswer": "b",
+"difficulty": "advanced"
+},
+{
+"question": "8. The rate of spontaneous emission Rsp in a direct bandgap semiconductor is proportional to:",
+"answers": {
+"a": "n²",
+"b": "n",
+"c": "Eg",
+"d": "1/Eg"
+},
+"explanations": {
+"a": "Correct. Rsp ∝ n² since recombination depends on both electron and hole densities.",
+"b": "Incorrect. Single carrier density does not define recombination fully.",
+"c": "Incorrect. Energy gap affects wavelength, not Rsp directly.",
+"d": "Incorrect. Inverse Eg relation doesn't hold."
+},
+"correctAnswer": "a",
+"difficulty": "advanced"
+},
+{
+"question": "9. In stimulated emission, the emitted photon has:",
+"answers": {
+"a": "Higher energy than incident photon",
+"b": "Same energy, phase, and direction as incident photon",
+"c": "Lower energy than incident photon",
+"d": "Random phase and direction"
+},
+"explanations": {
+"a": "Incorrect. Energy is not amplified per photon.",
+"b": "Correct. Stimulated emission produces photons coherent in energy, phase, and direction.",
+"c": "Incorrect. Photon energy remains constant.",
+"d": "Incorrect. Randomness applies to spontaneous emission, not stimulated."
+},
+"correctAnswer": "b",
+"difficulty": "advanced"
+}
+]}
