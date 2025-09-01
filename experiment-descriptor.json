@@ -28,7 +28,7 @@
       "content-type": "assesment"
     },
     {
-      "target": "index.html",
+      "target": "simulation.html",
       "source": "simulation/index.html",
       "label": "Simulation",
       "unit-type": "task",
