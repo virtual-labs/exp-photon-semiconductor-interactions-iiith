@@ -268,9 +268,4 @@ Test understanding through comprehensive challenges covering photon-semiconducto
    - Connect emission wavelengths with band gap energies
    - Pair device types with their operating principles
 
-2. **Interactive Matching**:
-   - Click items to create connections
-   - Visual connection lines show relationships
-   - Multiple simultaneous pairings possible
 
-\
