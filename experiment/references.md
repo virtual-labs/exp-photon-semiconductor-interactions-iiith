@@ -1,3 +1,3 @@
-1.Streetman & Banerjee, Solid State Electronic Devices<br>
-2.S. M. Sze, Physics of Semiconductor Devices<br>
-3.Yariv & Yeh, Photonics: Optical Electronics in Modern Communications
+1. Streetman, B. G., & Banerjee, S. K. (2015). *Solid State Electronic Devices* (7th ed.). Pearson. pp. 395-425. [Link](https://www.pearson.com/en-us/subject-catalog/p/solid-state-electronic-devices/P200000003250)<br>
+2. Sze, S. M., & Ng, K. K. (2006). *Physics of Semiconductor Devices* (3rd ed.). Wiley-Interscience. pp. 663-742. [Link](https://www.wiley.com/en-us/Physics+of+Semiconductor+Devices%2C+3rd+Edition-p-9780471143239)<br>
+3. Yariv, A., & Yeh, P. (2007). *Photonics: Optical Electronics in Modern Communications* (6th ed.). Oxford University Press. pp. 578-615. [Link](https://global.oup.com/academic/product/photonics-9780195179460)

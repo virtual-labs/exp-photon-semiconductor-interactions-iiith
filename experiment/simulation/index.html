@@ -706,8 +706,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             font-size: 10px;
             z-index: 25;
-            max-width: 200px;
-            min-width: 180px;
+            max-width: 240px;
+            min-width: 220px;
             backdrop-filter: blur(8px);
             transition: all 0.3s ease;
             transform: translateX(100%);
@@ -776,7 +776,7 @@
 
         .legend-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 6px;
             gap: 8px;
             min-height: 16px;
@@ -864,9 +864,11 @@
 
         .legend-text {
             color: #374151;
-            line-height: 1.2;
+            line-height: 1.3;
             font-size: 10px;
             flex: 1;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .legend-physics {
@@ -2827,8 +2829,8 @@
             },
             {
                 text: "The _____ efficiency of a photodetector is the ratio of generated _____ to incident photons.",
-                blanks: ["quantum", "carriers"],
-                explanation: "Quantum efficiency measures how effectively photons are converted to electrical carriers."
+                blanks: ["quantum", ["carriers", "charge carriers"]],
+                explanation: "Quantum efficiency measures how effectively photons are converted to electrical carriers (or charge carriers)."
             },
             {
                 text: "In _____ semiconductors like Silicon, light emission is _____ due to indirect transitions.",
@@ -3237,7 +3239,7 @@
                         </div>
                         <div class="legend-item">
                             <div class="legend-symbol electron">e⁻</div>
-                            <div class="legend-text">Photoelectron</div>
+                            <div class="legend-text">Electron</div>
                         </div>
                         <div class="legend-item">
                             <div class="legend-symbol hole">h⁺</div>
@@ -3270,7 +3272,7 @@
             quickInfo.id = 'absorption-quick-info';
             quickInfo.innerHTML = `
                 <div class="quick-info-title">Energy Conservation</div>
-                E_photon = E_gap + E_kinetic
+                E<sub>photon</sub> = E<sub>gap</sub> + E<sub>kinetic</sub>
             `;
             container.appendChild(quickInfo);
         }
@@ -4377,9 +4379,25 @@
                     total++;
                     const input = document.querySelector(`[data-question="${qIndex}"][data-blank="${bIndex}"]`);
                     const userAnswer = input.value.trim().toLowerCase();
-                    const correctLower = correctAnswer.toLowerCase();
                     
-                    if (userAnswer === correctLower || correctLower.includes(userAnswer) && userAnswer.length > 2) {
+                    // Handle both string and array of acceptable answers
+                    let isCorrect = false;
+                    let displayAnswer = correctAnswer;
+                    
+                    if (Array.isArray(correctAnswer)) {
+                        // Multiple acceptable answers
+                        displayAnswer = correctAnswer[0];
+                        isCorrect = correctAnswer.some(ans => {
+                            const correctLower = ans.toLowerCase();
+                            return userAnswer === correctLower || (correctLower.includes(userAnswer) && userAnswer.length > 2);
+                        });
+                    } else {
+                        // Single answer
+                        const correctLower = correctAnswer.toLowerCase();
+                        isCorrect = userAnswer === correctLower || (correctLower.includes(userAnswer) && userAnswer.length > 2);
+                    }
+                    
+                    if (isCorrect) {
                         input.style.borderColor = '#10b981';
                         input.style.background = '#f0fdf4';
                         input.style.color = '#065f46';
@@ -4388,7 +4406,7 @@
                         input.style.borderColor = '#ef4444';
                         input.style.background = '#fef2f2';
                         input.style.color = '#991b1b';
-                        input.placeholder = correctAnswer;
+                        input.placeholder = displayAnswer;
                     }
                 });
                 
@@ -4953,23 +4971,119 @@
                     }, 50);
                 }
             },
-            // Step 14: Challenges
+            // Step 14: Absorption Animation Challenge
+            {
+                title: "Try Absorption Animation",
+                content: "Now let's see absorption in action! Click the 'Animate Absorption' button to visualize how a photon gets absorbed and creates an electron-hole pair.",
+                element: "#module-0",
+                position: "center",
+                width: 800,
+                height: 400,
+                action: function() { switchModule(0); },
+                challenge: {
+                    title: "Interactive Task",
+                    content: "Set Silicon as material, photon energy above 1.1 eV, and click 'Animate Absorption' to see the process."
+                }
+            },
+            // Step 15: Emission Animation
+            {
+                title: "Start Emission Animation",
+                content: "In the Carrier Dynamics module, click 'Start Emission' to watch carriers recombine and emit light. Try different emission types to see how they differ.",
+                element: "#module-1",
+                position: "center",
+                width: 800,
+                height: 400,
+                action: function() { switchModule(1); },
+                challenge: {
+                    title: "Experiment",
+                    content: "Try LED emission type and click 'Start Emission'. Observe the emission spectrum graph."
+                }
+            },
+            // Step 16: Spectrum Analysis
+            {
+                title: "Understanding Emission Spectrum",
+                content: "The emission spectrum shows the wavelength distribution of emitted light. The peak position is determined by the bandgap energy: λ = hc/Eg. Different materials emit at different wavelengths.",
+                element: "#emissionSpectrumPlot",
+                position: "right",
+                width: 450,
+                height: 300
+            },
+            // Step 17: Quantum Efficiency
+            {
+                title: "Quantum Efficiency Graph",
+                content: "This graph shows how efficiently photons are converted to carriers (or vice versa). Notice how temperature affects efficiency - higher temperatures generally reduce quantum efficiency due to increased non-radiative recombination.",
+                element: "#quantumEfficiencyPlot",
+                position: "right",
+                width: 450,
+                height: 300
+            },
+            // Step 18: Compare Direct vs Indirect
+            {
+                title: "Comparing Bandgap Types",
+                content: "Try comparing GaAs (direct) with Si (indirect). Direct bandgap materials show much higher quantum efficiency for emission because they don't require phonon assistance.",
+                element: "#module-1",
+                position: "center",
+                width: 800,
+                height: 400,
+                action: function() { switchModule(1); },
+                challenge: {
+                    title: "Comparison Task",
+                    content: "Switch between GaAs and Si materials. Notice the difference in emission intensity and efficiency."
+                }
+            },
+            // Step 19: Challenges Module
             {
                 title: "Knowledge Challenges",
-                content: "Test your understanding with interactive quizzes and problems. These challenges cover the key concepts from the absorption and emission modules.",
+                content: "Test your understanding with interactive quizzes and problems. These challenges cover key concepts from absorption and emission modules. Complete all three challenge types to master the material!",
                 element: "#module-2",
                 position: "center",
                 width: 800,
                 height: 400,
                 action: function() { switchModule(2); }
             },
-            // Step 15: Conclusion
+            // Step 20: MCQ Challenge Tips
             {
-                title: "You're Ready to Explore!",
-                content: "You've completed the guided tour. Now experiment with different parameters, try out the challenges, and deepen your understanding of photon-semiconductor interactions!",
+                title: "Multiple Choice Questions",
+                content: "Answer the multiple choice questions based on what you learned. Click on your answer choice, then check your results. Hints are available if you need help!",
+                element: "#challenge1",
+                position: "right",
+                width: 450,
+                height: 200
+            },
+            // Step 21: Fill Blanks Tips
+            {
+                title: "Complete the Equations",
+                content: "Fill in the missing terms in fundamental equations. Type your answers in the input fields. For the carrier-related question, both 'carriers' and 'charge carriers' are acceptable answers.",
+                element: "#challenge2",
+                position: "right",
+                width: 450,
+                height: 200
+            },
+            // Step 22: Advanced Challenge Tips
+            {
+                title: "Advanced Concepts",
+                content: "These questions dive deeper into quantum optics and device physics. Take your time and think about the underlying physics principles you've learned.",
+                element: "#challenge3",
+                position: "right",
+                width: 450,
+                height: 200
+            },
+            // Step 23: Experimentation Tips
+            {
+                title: "Tips for Experimentation",
+                content: "<strong>Absorption Module:</strong> Try different materials and photon energies. Notice how absorption only occurs when E_photon ≥ E_g.<br><br><strong>Emission Module:</strong> Adjust excitation power, carrier lifetime, and temperature to see their effects on emission intensity and efficiency.<br><br><strong>Key Parameters to Explore:</strong><ul style='margin-top:10px;padding-left:20px;'><li>Material bandgap (determines absorption threshold)</li><li>Photon energy (must exceed bandgap)</li><li>Temperature (affects quantum efficiency)</li><li>Carrier lifetime (determines emission duration)</li></ul>",
                 element: "body",
                 position: "center",
-                width: 300,
+                width: 500,
+                height: 350
+            },
+            // Step 24: Conclusion
+            {
+                title: "You're Ready to Explore!",
+                content: "You've completed the comprehensive guided tour. Now experiment with different parameters, complete all challenges, and deepen your understanding of photon-semiconductor interactions. Remember: hands-on exploration is the best way to learn!",
+                element: "body",
+                position: "center",
+                width: 400,
                 height: 200
             }
         ];
@@ -5297,6 +5411,11 @@
             document.querySelectorAll('.module-content').forEach(module => {
                 module.style.transition = 'opacity 0.3s ease-in-out';
             });
+            
+            // Auto-start the guided tour after a brief delay
+            setTimeout(() => {
+                startGuidedTour();
+            }, 1500);
         });
     </script>
 </body>
